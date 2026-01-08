@@ -1,2 +1,4 @@
 resolver: lts-20.25 # GHC 9.2.8
-install-ghc: true
+system-ghc: true # NOTE: These must be set otherwise stack tries to be smart.
+nix:
+  enable: false
