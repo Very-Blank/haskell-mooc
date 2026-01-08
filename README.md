@@ -23,12 +23,21 @@ this repository ([part1.html](part1.html), [part2.html](part2.html)).
 
 ## Exercises
 
-Exercises can be found under `exercises/` directory. All required dependencies
-can be downloaded and built with:
-
+Exercises can be found under `exercises/` directory. To enter the dev environment run:
 ```
+nix develop .#
+```
+Which is the same as:
+```
+nix develop .#default
+```
+The dev environment also runs:
+```
+cd exercises 
 stack build
 ```
+This downloads and builds the required dependencies.
+The dev environment uses zsh by default as the shell.
 
 Exercises are Haskell source code files named `Set1.hs`, `Set2.hs` and so on.
 You complete the exercises by editing the file according to the instructions in
@@ -43,23 +52,11 @@ of the set you are working on.
 
 See [the material](part1.html#working-on-the-exercises) for more info.
 
-## Troubleshooting
-
-Here are some fixes for common problems with `stack build`:
-
-- If you get an error like `While building package zlib-0.6.2.3`, you need to install the zlib library headers. The right command for Ubuntu is `sudo apt install zlib1g-dev`.
-- If you get an error like `Downloading lts-18.18 build plan ... RedownloadInvalidResponse`, your version of stack is too old. Run `stack upgrade` to get a newer one.
-
-### Newer GHC version
-
-If you need to use a newer version of GHC, perhaps to get
-vscode-haskell to work, try the `ghc-9.6.6` branch of this repository
-for GHC 9.6.6. The default for the course is GHC 9.2.8 for now.
-
-Don't forget to run `stack build` again after changing branches.
-
 ## Reporting errors
+IF you have an issue on building the dependencies or other issue related to dev environment. (I might have missed something.)
+- an issue on THIS repository.
 
+## Reporting errors in material
 If you notice an error in these materials, you can report it via
-- an issue or pull request in this repository (see [CONTRIBUTING.md](CONTRIBUTING.md))
+- an issue or pull request on the orginal repository (see [CONTRIBUTING.md](CONTRIBUTING.md))
 - the course [channel on Telegram](https://t.me/haskell_mooc_fi)
