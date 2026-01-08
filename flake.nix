@@ -24,9 +24,10 @@
           haskellPackages.haskellPackages.zlib
           haskellPackages.zlib # The zlib.h which the haskell zlib depends on.
 
+          haskellPackages.haskell-language-server # You might want to remove this I personally need it.
+
           # NOTE: If you change this remember to change the shellhook.
           pkgs.zsh # The shell you want to use
-          pkgs.haskellPackages.haskell-language-server # You might want to remove this I personally need it.
         ];
 
         # Any libraries that need to be dynamically linked to.
